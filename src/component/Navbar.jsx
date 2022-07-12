@@ -4,7 +4,7 @@ const Header = ()=>{
 
     return (
        
-            <header  className="flex justify-center items-center">
+            <header  className="w-full flex justify-center items-center align-center">
             
             <div className='flex justify-start md:justify-start mx-4 my-10 '>
             <div className='text-base text-2xl font-semibold text-[#5878bc] shrink'>Github</div>

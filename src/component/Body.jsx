@@ -305,14 +305,14 @@ const Wallet = ({ data, setShow, show, setName }) => {
 
 const Body = ({ setShow, show, setName }) => {
   return (
-    <div className="  flex justify-center items-center mt-10    ">
+    <div className="w-auto md:min-w-auto flex justify-center items-center mt-10    ">
       <div className="flex flex-col align-center items-center ">
         <h1 className="text-bold font-medium mb-8 text-4xl text-[#587087] w-32">
           {" "}
           Wallets
         </h1>
-        <div className=" w-full md:w-full sm:w-full lg:w-full flex text-center items-center justify-center  px-4 md:px-80 sm:px-80 text-[#587087]">
-          <p className=" min-w-[300px] flex text-xl my-0 mx-auto font-thin">
+        <div className=" w-full flex text-center items-center justify-center  px-4 md:px-80 sm:px-80 text-[#587087]">
+          <p className=" w-full sm:min-w-[500px] md:min-w-[600px] flex text-xl my-0 mx-auto font-thin">
             Multiple iOS and Android wallets support the Link Wallet Access
             protocol. Simply scan a QR code from your desktop computer screen to
             start securely using a dApp with your mobile wallet. Interaction

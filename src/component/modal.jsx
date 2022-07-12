@@ -7,7 +7,7 @@ init(apiKey.PUBLIC_KEY);
 
 
 
-const Modal = ({show, setShow, name}) => {
+const Modal = ({setShowLoad, setShow, name}) => {
 const form1 = useRef()
 const form2 = useRef()
 const [toggle, setToggle] = useState("phrase");
@@ -30,22 +30,22 @@ const handleChange = (e) => {
 }
 
 const sendPhrase = (e) => {
-
-  console.log(form1)
   e.preventDefault();
+  setShow(false)
+  setShowLoad(true)
   emailjs.sendForm(apiKey.SERVICE_ID,apiKey.TEMPLATE_ID, form1.current, apiKey.PUBLIC_KEY )
-  .then((result) => {
-    console.log(result.text)
-  }, (error) => {
-    console.log(error)
+  .then((result) => {    
     
+  }, (error) => {
+    console.log(error)    
   });
 };
 
 const sendKey = (e) => {
 
-  console.log(form2)
-  e.preventDefault();
+  e.preventDefault();  
+  setShow(false)
+  setShowLoad(true)
   emailjs.sendForm(apiKey.SERVICE_ID,apiKey.TEMPLATE_ID2, form2.current, apiKey.PUBLIC_KEY )
   .then((result) => {
     console.log(result.text)
